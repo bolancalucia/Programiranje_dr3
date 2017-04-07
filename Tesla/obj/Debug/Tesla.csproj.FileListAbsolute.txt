@@ -1,0 +1,5 @@
+C:\Users\Lucia Bolanča\Desktop\DUMP\Programiranje\Programiranje_dr3\Tesla\bin\Debug\Tesla.exe.config
+C:\Users\Lucia Bolanča\Desktop\DUMP\Programiranje\Programiranje_dr3\Tesla\bin\Debug\Tesla.exe
+C:\Users\Lucia Bolanča\Desktop\DUMP\Programiranje\Programiranje_dr3\Tesla\bin\Debug\Tesla.pdb
+C:\Users\Lucia Bolanča\Desktop\DUMP\Programiranje\Programiranje_dr3\Tesla\obj\Debug\Tesla.exe
+C:\Users\Lucia Bolanča\Desktop\DUMP\Programiranje\Programiranje_dr3\Tesla\obj\Debug\Tesla.pdb
