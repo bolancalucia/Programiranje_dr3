@@ -28,15 +28,15 @@ namespace Tesla
                 Power = 1200
             };
 
-            Battery Battery1 = new Battery("B1", Engine1.Power, 1000, 50); // Jel triba snaga?
-            Battery Battery2 = new Battery("B2", Engine2.Power, 5000, 250);
+            Battery Battery1 = new Battery("B1", 500, 1000, 50); 
+            Battery Battery2 = new Battery("B2", 4000, 5000, 250);
 
             Car Car1 = new Car("Skoda Octavia", Engine1, Battery1);
             Car Car2 = new Car("Nissan GTR", Engine2, Battery2);
 
-            Console.WriteLine(Car2.Battery.StoredEnergy);
-            Car2.Drive(100);
-            Console.WriteLine(Car2.Battery.StoredEnergy);
+            Console.WriteLine("Energija baterije prije voznje: " + Car2.Battery.StoredEnergy);
+            Car2.Drive(800);
+            Console.WriteLine("Energija baterije poslije voznje: " + Car2.Battery.StoredEnergy);
 
 
         }
@@ -49,10 +49,10 @@ namespace Tesla
             public double StoredEnergy;
             public double MaximumStoredEnergy;
 
-            public Battery(string model,double power,double maximumEnergy, double PricePerWh) // SNAGA NE TRIBA U KONSTRUKTORU ??
+            public Battery(string model,double storedEnergy,double maximumEnergy, double PricePerWh) 
             {
                 Model = model;
-                StoredEnergy = power;
+                StoredEnergy = storedEnergy;
                 MaximumStoredEnergy = maximumEnergy;
             }
 

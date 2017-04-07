@@ -10,11 +10,11 @@ namespace Zooloski
     {
         static void Main(string[] args)
         {
-            Animal Lav = new Animal("Simba", Animals.Lion, 80, new DateTime(2017, 4, 1, 18, 30, 15));
+            Animal Lav = new Animal("Simba", Animals.Lion, 80, new DateTime(2016, 4, 1, 18, 30, 15));
             Animal Slon = new Animal("Dumbo", Animals.Elephant, 2000, new DateTime(2017, 4, 5, 12, 15, 45));
 
             Console.WriteLine(Lav.Print());
-            Lav.IsHungry();
+            Console.WriteLine("Je li zivotinja gladna? " + Lav.IsHungry());
             Lav.Feed();
             Console.WriteLine(Lav.Print() + "\n");
 
@@ -55,17 +55,21 @@ namespace Zooloski
 
             public int Feed()
             {
-                LastFed = DateTime.Now;
-                int FoodEaten = Weight / 20;
-                if (FoodEaten < 1)
-                    FoodEaten = 1;
-
-                return FoodEaten;
+                int FoodEaten=0;
+                if (IsHungry())
+                {
+                    LastFed = DateTime.Now;
+                    FoodEaten = Weight / 20;
+                    if (FoodEaten < 1)
+                        FoodEaten = 1;
+                    return FoodEaten;
+                }
+                else return -1;
             }
 
             public bool IsHungry()
             {
-                if ((DateTime.Now - LastFed).Days > Weight / 10 && (DateTime.Now - LastFed).Hours > 24)
+                if (((DateTime.Now - LastFed).TotalDays > ( Weight / 10 )) && (DateTime.Now - LastFed).TotalHours > 24)
                     return true;
                 else return false;
             }
